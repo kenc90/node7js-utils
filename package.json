@@ -1,0 +1,19 @@
+{
+  "name": "node7js-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenc90/node7js-utils.git"
+  },
+  "author": "Ken Chau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenc90/node7js-utils/issues"
+  },
+  "homepage": "https://github.com/kenc90/node7js-utils#readme"
+}
