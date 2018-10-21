@@ -32,6 +32,36 @@ function unique(arr) {
     return resultArr;
 }
 
+function findObject(arr, key, value = '*'){
+    for(let i = 0; i < arr.length; i++){
+        if(key in arr[i] && (arr[i][key] === value || value === '*')){
+            return arr[i];
+        }
+    }
+    return null;
+}
+
+function findObjects(arr, key, value = '*'){
+    let resultList = [];
+    for(let i = 0; i < arr.length; i++){
+        if(key in arr[i] && (arr[i][key] === value || value === '*')){
+            resultList.push(arr[i]);
+        }
+    }
+    return resultList;
+}
+
+
+function objListToDict(arr, key){
+    let dict = {};
+    for(let i = 0; i < arr.length; i++){
+        if(key in arr[i]){
+            dict[arr[i][key]] = arr[i];
+        }
+    }
+    return dict;
+}
+
 
 
 
@@ -42,4 +72,7 @@ module.exports = {
     insert: insert,
     addUnique: addUnique,
     unique: unique,
+    findObject: findObject,
+    findObjects: findObjects,
+    objListToDict: objListToDict,
 }

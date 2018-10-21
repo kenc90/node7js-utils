@@ -36,10 +36,35 @@ function isURL(text){
 }
 
 
+function format(text, ...replaces){
+    for(let i = 0; i < replaces.length; i++){
+        text = replaceAll(text, `{${i}}`, replaces[i]);
+    }
+    return text;
+}
+
+function formatWithDict(text, dict){
+    for (var key in dict) {
+        text = replaceAll(text, `{${key}}`, dict[key]);
+    }
+    return text;
+}
+
+
+var idCounter = 999;
+function generateRuntimeUniqueId(prefix = 'R_T_U_I_D'){
+    idCounter++;
+    return prefix + '_' + idCounter;
+}
+
+
 module.exports = {
     replaceAll: replaceAll,
     replaceFirst: replaceFirst,
     replacreplaceLasteAll: replaceLast,
     charCount: charCount,
     isURL: isURL,
+    format: format,
+    formatWithDict: formatWithDict,
+    generateRuntimeUniqueId: generateRuntimeUniqueId,
 };
