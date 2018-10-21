@@ -61,7 +61,7 @@ function generateRuntimeUniqueId(prefix = 'R_T_U_I_D'){
 module.exports = {
     replaceAll: replaceAll,
     replaceFirst: replaceFirst,
-    replacreplaceLasteAll: replaceLast,
+    replaceLast: replaceLast,
     charCount: charCount,
     isURL: isURL,
     format: format,
