@@ -52,7 +52,7 @@ function findObjects(arr, key, value = '*'){
 }
 
 
-function objListToDict(arr, key){
+function objectListToDict(arr, key){
     let dict = {};
     for(let i = 0; i < arr.length; i++){
         if(key in arr[i]){
@@ -74,5 +74,5 @@ module.exports = {
     unique: unique,
     findObject: findObject,
     findObjects: findObjects,
-    objListToDict: objListToDict,
+    objectListToDict: objectListToDict,
 }
