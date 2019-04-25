@@ -54,6 +54,10 @@ function insertAt(text, insertedText, index) {
     return [text.slice(0, index), insertedText, text.slice(index)].join('');
 }
 
+function numberWithCommas(num){
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 var idCounter = 999;
 function generateRuntimeUniqueId(prefix = 'R_T_U_I_D') {
     idCounter++;
@@ -70,5 +74,6 @@ module.exports = {
     format: format,
     formatWithDict: formatWithDict,
     insertAt: insertAt,
+    numberWithCommas: numberWithCommas,
     generateRuntimeUniqueId: generateRuntimeUniqueId,
 };
